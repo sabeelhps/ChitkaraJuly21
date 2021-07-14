@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>HTML Forms</h1>
+
+    <h2>Sign Up</h2>
+
+    <form action="#" method="POST">
+
+        <fieldset>
+
+            <legend>Personal Info</legend>
+
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" placeholder="First Name" name="firstname">
+            <br>
+            <br>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" placeholder="Last Name" name="lastname">
+
+            <br>
+            <br>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="others">Others</label>
+            <input type="radio" id="others" name="gender" value="other">
+        
+        </fieldset>
+        <br>
+        <br>
+
+        <fieldset>
+
+            <legend>Education Info</legend>
+
+            <label for="marksheet">Marksheet</label>
+            <input type="file" id="marksheet">
+
+            <br>
+            <br>
+            <label for="biodata">Biodata</label>
+            <br>
+            <textarea name="biodata" id="biodata" cols="30" rows="5"></textarea>
+
+            
+            <br>
+            <br>
+        </fieldset>
+
+        <br>
+        <br>
+        <button>Submit</button>
+
+    </form>
+
+
+    
+</body>
+</html>
