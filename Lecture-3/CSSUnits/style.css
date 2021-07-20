@@ -1,0 +1,48 @@
+article:first-of-type{
+    font-size: 100px;
+}
+
+article:first-of-type p{
+    font-size: 30%;
+}
+
+section:nth-of-type(1){
+    border:1px solid black;
+    width: 400px;
+    height: 400px;
+}
+
+section:nth-of-type(1) div{
+    border:2px solid red;
+    width: 40%;
+    height: 40%;
+}
+
+section:nth-of-type(2){
+    width: 1000px;
+    height: 400px;
+    border:2px solid lightsalmon;
+}
+
+section:nth-of-type(2) img{
+    height: 100%;
+    width: 100%;
+}
+
+html{
+    font-size: 30px;
+}
+
+ul{
+    /* font-size: 2em; */
+    font-size: 2rem;
+}
+
+
+section:nth-of-type(3){
+    border: 2px solid black;
+    background-color: cornflowerblue;
+    height: 40vh;
+    width: 70vw;
+}
+

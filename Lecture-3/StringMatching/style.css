@@ -1,0 +1,17 @@
+/* Starts with */
+
+a[href^='https']{
+    color:red;
+}
+
+/* Ends With */
+
+a[href$='in']{
+    color:green;
+}
+
+/* Present Anywhere */
+
+a[href*='coding']{
+    color:palevioletred;
+}

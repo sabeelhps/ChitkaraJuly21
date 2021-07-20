@@ -1,0 +1,20 @@
+p{
+    color:red;
+}
+
+.para{
+    color:blue;
+}
+
+#special-para{
+    color:purple;
+}
+
+
+ul{
+    color:red;
+}
+
+ul > li{
+    border-top:2px solid green;
+}
