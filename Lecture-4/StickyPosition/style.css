@@ -1,0 +1,15 @@
+div{
+    border:2px solid black;
+    background-color: lightskyblue;
+    font-size: 30px;
+    margin:20px;
+}
+
+div{
+    position: sticky;
+    top:30px;
+}
+
+li::before{
+    content: "\260E";
+}
