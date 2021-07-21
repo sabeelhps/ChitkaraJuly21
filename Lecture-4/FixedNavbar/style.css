@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+nav{
+    background-color: #0077b6;
+    position: fixed;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 24px;
+}
+
+ul{
+    list-style: none;
+}
+
+li:first-of-type{
+    margin-left: 20px;
+}
+
+li{
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+li:last-of-type{
+   position: absolute;
+   right: 30px;
+}

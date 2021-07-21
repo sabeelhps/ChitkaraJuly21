@@ -1,0 +1,10 @@
+section{
+    border:1px solid #ccc;
+    width: 70vw;
+    margin: 40px auto;
+    padding: 16px;
+}
+
+p{
+    font-size: 16px;
+}
