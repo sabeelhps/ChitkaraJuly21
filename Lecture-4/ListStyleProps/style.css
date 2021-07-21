@@ -1,0 +1,18 @@
+h2{
+    text-align: center;
+}
+
+section{
+    width: 70vw;
+    margin:40px auto;
+}
+
+li{
+    border:1px solid black;
+    margin-bottom: 10px;
+    padding: 5px;
+    /* list-style-type: square; */
+    list-style-type: '\1F96D';
+    list-style-position: outside;
+    /* list-style-image: url(); */
+}
