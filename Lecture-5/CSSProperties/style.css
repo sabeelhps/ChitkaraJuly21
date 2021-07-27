@@ -1,0 +1,30 @@
+article p{
+   white-space: nowrap; 
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+article p:hover{
+    overflow: scroll;
+    text-overflow: clip;
+}
+
+
+section{
+    border:1px solid #ccc;
+    width: 30vw;
+    margin:40px auto;
+    padding: 16px;
+    height: 30vh;
+    overflow: scroll;
+}
+
+div{
+    border:5px solid black;
+    background-color: palevioletred;
+    height: 50px;
+    min-width: 600px;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
