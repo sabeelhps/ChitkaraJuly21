@@ -1,0 +1,54 @@
+article{
+    width: 70vw;
+    border:1px solid #ccc;
+    margin:30px auto;
+    padding: 16px;
+}
+
+h1{
+    font-size: 5rem;
+    text-align: center;
+}
+
+/* @media screen and (max-width:850px){
+    h1{
+        color:red;
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:510px){
+    h1{
+        color:blue;
+        font-size: 2rem;
+    }
+} */
+
+
+/* ----------------------Device Orientation -------- */
+
+/* @media screen and (orientation:portrait){
+    article{
+        background-color: lightblue;
+    }
+    article h1{
+        text-decoration: line-through;
+    }
+}
+
+@media screen and (orientation:landscape){
+    article{
+        background-color: lightgreen;
+    }
+    article h1{
+        text-transform: uppercase;
+    }
+} */
+
+
+@media screen and (orientation:landscape),(max-width:500px){
+    h1{
+        color:seagreen;
+        border: 3px solid red;
+    }
+}

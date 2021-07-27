@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+nav{
+    background-color: #343a40;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.8rem;
+    padding: 20px 10px;
+}
+
+li{
+    padding: 20px 10px;
+}
+
+@media screen and (max-width:620px){
+    nav,ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
