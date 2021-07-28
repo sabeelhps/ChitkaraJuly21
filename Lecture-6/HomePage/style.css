@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+nav{
+    background-color: #343a40;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.8rem;
+    padding: 20px 10px;
+}
+
+li{
+    padding: 20px 10px;
+}
+
+@media screen and (max-width:620px){
+    nav,ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Navbar css ends here */
+
+section{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 75vw;
+   
+    margin:30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+figure{
+    width: 300px;
+    border:1px solid #ccc;
+    margin:20px;
+    text-align: center;
+    box-shadow: 0px 0px 3px rgb(104,104,104);
+    transition: 100ms;
+}
+
+figure:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+figure img{
+    height: 200px;
+    width: 100%;
+}
+
+figcaption button{
+    padding: 10px 20px;
+    margin:10px;
+    font-size: 16px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    background:none;
+}
+
+figcaption button:hover{
+    background: lightslategray;
+    color:white;
+    cursor: pointer;
+}
+
+figcaption p{
+    font-weight: 300;
+}
