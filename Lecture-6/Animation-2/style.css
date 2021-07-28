@@ -1,0 +1,26 @@
+div{
+    height: 200px;
+    width: 200px;
+    margin:20px auto;
+    animation:1s infinite ease-in alternate bounce;
+}
+
+@keyframes bounce {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(565px);
+    }
+
+}
+
+div img{
+    animation: 2s linear infinite rotate;
+}
+
+@keyframes rotate {
+    100%{
+        transform: rotate(1turn);
+    }
+}

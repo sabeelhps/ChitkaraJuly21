@@ -1,0 +1,38 @@
+section{
+    width: 80vw;
+    margin: 30px auto;
+    border:1px solid #ccc;
+}
+
+div{
+    background-color: aqua;
+    height: 30px;
+    width: 40px;
+    margin:10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    animation:3s 3 alternate forwards loader;
+}
+
+
+@keyframes loader {
+    from{
+        width: 40px;
+    }
+    to{
+        width: 1000px;
+    }
+}
+
+div:nth-of-type(1){
+    animation-timing-function: ease-in;
+}
+div:nth-of-type(2){
+    animation-timing-function: ease-in-out;
+}
+div:nth-of-type(3){
+    animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+div:nth-of-type(4){
+    animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
