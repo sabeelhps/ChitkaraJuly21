@@ -1,0 +1,15 @@
+:root{
+    --heading-color:aqua;
+    --background-color:lightblue;
+    --text-ki-shadow : 0px 0px 3px rgb(104,104,104);
+}
+
+
+body{
+    background-color: var(--background-color);
+}
+
+h1{
+    color: var(--heading-color);
+    text-shadow: var(--text-ki-shadow);
+}
