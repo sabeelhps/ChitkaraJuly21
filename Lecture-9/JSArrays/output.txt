@@ -1,0 +1,50 @@
+Array Methods (push,pop,shift,unshift,slice,splice,split,join) -----------------
+
+----------concat--------
+
+const arr1 = [1,2,3];
+undefined
+const arr2 = ["Mango","Oranges"];
+undefined
+arr1.concat(arr2)
+(5) [1, 2, 3, "Mango", "Oranges"]
+arr1
+(3) [1, 2, 3]
+arr2.concat(arr1)
+(5) ["Mango", "Oranges", 1, 2, 3]
+
+
+------------includes------
+
+const arr = ['Mango','Oranges','Grapes'];
+undefined
+arr.includes('Mango')
+true
+arr.includes('Apple')
+false
+
+------------indexOf--------
+
+arr
+(3) ["Mango", "Oranges", "Grapes"]
+arr.indexOf('Oranges');
+1
+arr.indexOf('Grapes');
+2
+
+"We are learning array methods".indexOf('learning')
+7
+"We are learning array methods".indexOf('learni')
+7
+"We are learning array methods".indexOf('cat')
+-1
+
+---------------reverse -------
+
+
+arr
+(3) ["Mango", "Oranges", "Grapes"]
+arr.reverse()
+(3) ["Grapes", "Oranges", "Mango"]
+arr
+(3) ["Grapes", "Oranges", "Mango"]

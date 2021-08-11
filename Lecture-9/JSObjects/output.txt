@@ -1,0 +1,29 @@
+JS Objects
+
+obj
+{name: "Sabeel", age: 22, favColor: Array(2), isAdult: true}
+obj["name"];
+"Sabeel"
+obj[name];
+undefined
+
+obj['favColor']
+(2) ["blue", "green"]
+
+
+
+------
+
+obj
+{name: "Sabeel", age: 22, favColor: Array(2), isAdult: true}
+obj.favPlace = 'Delhi';
+"Delhi"
+obj
+{name: "Sabeel", age: 22, favColor: Array(2), isAdult: true, favPlace: "Delhi"}
+delete obj.favPlace
+true
+obj
+{name: "Sabeel", age: 22, favColor: Array(2), isAdult: true}
+
+
+OBJECTS ARE ALSO REFERENCE TYPES
