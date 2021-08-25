@@ -1,0 +1,19 @@
+.heading{
+    border:5px solid black;
+    background-color: lightgreen;
+    color: red;
+    text-shadow: 1px 3px 3px rgb(104,104,104);
+}
+
+.brand-name{
+    padding: 20px;
+}
+
+ul{
+    border:1px solid black;
+    width: 360px;
+}
+
+.hide{
+    display: none;
+}
