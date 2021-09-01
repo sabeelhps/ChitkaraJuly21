@@ -5,7 +5,7 @@ const result = document.getElementById('result');
 
 function getShows(searchText) {
 
-
+    // To remove all the childs in a result div
     while (result.firstChild) {
         result.removeChild(result.firstChild);
     }
@@ -43,6 +43,8 @@ function getShows(searchText) {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
+
+    // getting the text from the form input
     const searchText = form.elements[0].value;
 
     getShows(searchText);
