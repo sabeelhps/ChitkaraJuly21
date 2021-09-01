@@ -1,0 +1,13 @@
+#container{
+    width: 80vw;
+    border: 1px solid black;
+    margin:40px auto;
+}
+
+#inp{
+    font-size: 24px;
+}
+
+button{
+    font-size: 24px;
+}
