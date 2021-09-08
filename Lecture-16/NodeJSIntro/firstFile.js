@@ -21,3 +21,11 @@ const obj = {
 
 console.log(obj.name);
 console.log(obj.sayName());
+
+// sorting
+
+const numbers = [2, 3, -10, 40, 50, -9999];
+
+numbers.sort((a, b) => b - a);
+
+console.log(numbers);
