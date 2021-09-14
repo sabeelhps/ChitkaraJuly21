@@ -1,0 +1,13 @@
+<%- include("./partials/header") %>
+<%- include("./partials/navbar") %>
+
+    <h1>My Todos</h1>
+
+    <ul>
+        <%for(let todo of todos){%>
+            <li><%=todo%></li>
+        <% } %>
+    </ul>
+
+    
+<%- include("./partials/footer") %>

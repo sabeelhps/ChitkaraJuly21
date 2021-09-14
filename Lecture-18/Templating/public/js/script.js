@@ -1,0 +1,1 @@
+alert("Hello from Scripts.js file")

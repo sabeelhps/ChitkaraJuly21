@@ -1,0 +1,20 @@
+<%- include("./partials/header") %>
+<%- include("./partials/navbar") %>
+    
+<h1>My Favourite Random number is <%= rnum %> </h1>
+
+    <%if(rnum%2===0){%>
+        <h2>This is Even Number</h2>
+    <%}else{%>
+        <h2>This is a Odd Number</h2>
+    <%}%>
+
+    <ul>
+        <%for(let i=1;i<=10;i++){%>
+            <li><%=i%></li>
+        <%}%>
+    </ul>
+
+    <h2><%= "templating".toUpperCase().substring(0,5) %></h2>
+
+<%- include("./partials/footer") %>
