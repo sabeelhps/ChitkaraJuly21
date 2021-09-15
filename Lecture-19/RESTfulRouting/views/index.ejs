@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+
+    <h1>All Comments</h1>
+    <a href="/comments/new">New Comment</a>
+    <ul>
+        <%for(let item of comments){%>
+            <li>
+                <strong><%=item.username%></strong>-<%=item.comment%>
+                <br>
+                <a href="/comments/<%=item.id%>">Show</a>
+            </li>
+        <%}%>
+    </ul>
+    
+</body>
+</html>
