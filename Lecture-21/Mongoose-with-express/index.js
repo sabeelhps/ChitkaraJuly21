@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const path = require('path');
 const Product = require('./models/product');
 const seedDB = require('./seed');
+const methodOverride = require('method-override');
+
 
 mongoose.connect('mongodb://localhost:27017/shop-db')
     .then(() => console.log('DB Connected'))
@@ -18,6 +20,7 @@ mongoose.connect('mongodb://localhost:27017/shop-db')
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 
 app.get('/', (req, res) => {
@@ -47,8 +50,45 @@ app.post('/products', async (req, res) => {
     res.redirect('/products');
 });
 
+app.get('/products/:id', async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.findById(id);
+    res.render('show', { product });
+});
 
+// To get the edit form prefilled with the current data
+app.get('/products/:id/edit', async (req, res) => {
+    
+    const { id } = req.params;
+
+    const product = await Product.findById(id);
+
+    res.render('edit', { product });
+})
+
+
+// updating a product with the given id and payload
+app.patch('/products/:id', async (req, res) => {
+
+    const { id } = req.params;
+
+    const updatedProduct = req.body;
+
+    await Product.findByIdAndUpdate(id, updatedProduct);
+
+    res.redirect('/products');
+});
+
+// Delete Particular Product
+app.delete('/products/:id', async(req, res) => {
+    
+    const { id } = req.params;
+
+    await Product.findByIdAndDelete(id);
+
+    res.redirect('/products');
+})
 
 app.listen(2323, () => {
     console.log('server started at port 2323');
-})
+});

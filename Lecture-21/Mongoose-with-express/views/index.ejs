@@ -26,13 +26,18 @@
 <body>
 
     <h1>ALL Products Goes Here</h1>
-    
+    <a href="/products/new">Add New Product</a>
     <ul>
         <% for(let product of products){%>
             <li>
                 <h3><%= product.name %> </h3> 
                 <p>$<%=product.price%></p>
                 <p><%=product.desc%></p> 
+                <a href="/products/<%=product._id%>">Show</a>
+                <a href="/products/<%=product._id%>/edit">Edit</a>
+                <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
             </li>    
         <% } %> 
     </ul>
