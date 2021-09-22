@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            list-style: none;
+        }
+
+        li{
+            width: 400px;
+            border:2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 1px 1px 2px rgb(104,104,104);
+            padding: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <h1>ALL Products Goes Here</h1>
+    
+    <ul>
+        <% for(let product of products){%>
+            <li>
+                <h3><%= product.name %> </h3> 
+                <p>$<%=product.price%></p>
+                <p><%=product.desc%></p> 
+            </li>    
+        <% } %> 
+    </ul>
+
+   
+
+</body>
+</html>
