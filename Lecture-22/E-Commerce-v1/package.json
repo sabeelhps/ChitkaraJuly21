@@ -5,13 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev":"nodemon ./index.js"
+    "dev": "nodemon ./app.js"
   },
   "author": "Sabeel Khan",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "method-override": "^3.0.0",
     "mongoose": "^6.0.7",
     "nodemon": "^2.0.12"
   }
