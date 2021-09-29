@@ -1,0 +1,29 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %> 
+
+
+<main class="container">
+
+    <h1 class="display-5">Shopping-Cart</h1>
+
+    <div class="row">
+        <% for(let product of products){ %> 
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="card mx-auto" style="width: 20rem;">
+                    <img src="<%=product.img%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><%=product.name%> </h5>
+                      <p class="card-text"><%=product.desc.substring(0,100)%></p>
+                      <h5 class="card-title">&#x20B9 <%=product.price%></h5>
+                      <a href="/products/<%=product._id%>" class="btn btn-outline-primary">Buy Now</a>
+                    </div>
+                  </div>
+            </div>
+        <%}%>
+    </div>
+
+
+</main>
+
+
+<%- include("../partials/footer") %> 
