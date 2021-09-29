@@ -7,9 +7,16 @@ const Review = require('../models/review');
 // Get all the products
 router.get('/products', async(req, res) => {
     
-    const products = await Product.find({});
+    try {
+        const products = await Product.find({});
 
-    res.render('products/index',{products});
+        res.render('products/index',{products});
+    }
+    catch (e) {
+        req.flash('error', 'oops,something went wrong');
+        res.redirect('/error');
+    }
+  
 });
 
 // Get the new from to create new product
@@ -20,57 +27,88 @@ router.get('/products/new', (req, res) => {
 // create a new product with the given payload
 router.post('/products', async (req, res) => {
     
-    const newProduct = {
-        ...req.body
+    try {
+        const newProduct = {
+            ...req.body
+        }
+    
+        await Product.create(newProduct);
+    
+        req.flash('success', 'Product Created Successfully!');
+        res.redirect('/products');
     }
-
-    await Product.create(newProduct);
-
-    res.redirect('/products');
+    catch (e) {
+        req.flash('error', 'oops,something went wrong');
+        res.redirect('/error');
+    }
 });
 
 // Show a particular product
 router.get('/products/:id', async (req, res) => {
-    
-    const { id } = req.params;
 
-    // inflating the foundproduct with the reviews using populate
-    const product = await Product.findById(id).populate('reviews');
-
-    res.render('products/show', { product });
+    try {
+        
+        const { id } = req.params;
+        // inflating the foundproduct with the reviews using populate
+        const product = await Product.findById(id).populate('reviews');
+        res.render('products/show', { product });
+        
+    } catch (e) {
+        
+        req.flash('error', 'oops,something went wrong');
+        res.redirect('/error');
+    }
 });
 
 
 // getting the edit form prefilled with the data
 router.get('/products/:id/edit', async (req, res) => {
     
-    const { id } = req.params;
+    try {
+        const { id } = req.params;
 
-    const product = await Product.findById(id);
-
-    res.render('products/edit', { product });
+        const product = await Product.findById(id);
+    
+        res.render('products/edit', { product });
+    } catch (e) {
+        req.flash('error', 'oops,something went wrong');
+        res.redirect('/error');
+    }
+  
 });
 
 
 // updating the product with the given payload
 router.patch('/products/:id', async (req, res) => {
     
-    const updatedProduct = req.body;
-    const { id } = req.params;
+    try {
+        const updatedProduct = req.body;
+        const { id } = req.params;
 
-    await Product.findByIdAndUpdate(id, updatedProduct);
+        await Product.findByIdAndUpdate(id, updatedProduct);
 
 
-    res.redirect(`/products/${id}`);
+        res.redirect(`/products/${id}`);
+    }
+    catch (e) {
+        req.flash('error', 'oops,something went wrong');
+        res.redirect('/error');
+    }
 });
 
 router.delete('/products/:id', async (req, res) => {
 
-    const { id } = req.params;
+    try {
+        const { id } = req.params;
     
-    await Product.findOneAndDelete(id);
+        await Product.findOneAndDelete(id);
 
-    res.redirect('/products');
+        res.redirect('/products');
+    }
+    catch (e) {
+        req.flash('error', 'oops,something went wrong');
+        res.redirect('/error');
+    }    
 });
 
 
@@ -78,19 +116,27 @@ router.delete('/products/:id', async (req, res) => {
 
 router.post('/products/:id/review', async(req, res) => {
 
-    const { id } = req.params;
-    const product = await Product.findById(id);
+    try {
+        const { id } = req.params;
+        const product = await Product.findById(id);
 
-    const { rating, comment } = req.body;
+        const { rating, comment } = req.body;
 
-    const review = new Review({ rating, comment });
+        const review = new Review({ rating, comment });
 
-    product.reviews.push(review);
+        product.reviews.push(review);
 
-    await product.save();
-    await review.save();
+        await product.save();
+        await review.save();
 
-    res.redirect(`/products/${id}`);
+        req.flash('success', 'Successfully created your review!!');
+
+        res.redirect(`/products/${id}`);
+    }
+    catch (e) {
+        req.flash('error', 'oops,something went wrong');
+        res.redirect('/error');
+    } 
 });
 
 
