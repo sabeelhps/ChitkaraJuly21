@@ -1,0 +1,6 @@
+1.Add Filter Functionality for products
+2.Upload Images to cloudinary using the multer middleware
+3.Add Footer
+4.Add Google,Facebook Auth
+5.Add Payment Gateway using payumoney(https://medium.com/@mayankgupta1338/node-js-express-js-payumoney-payment-integration-32d3058c714)
+

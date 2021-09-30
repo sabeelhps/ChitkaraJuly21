@@ -1,0 +1,58 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %> 
+
+<main class="container">
+
+   <%- include("../partials/flash") %> 
+   
+    <h1 class="display-5 mb-3">My Cart</h1>
+    <div class="row">
+        <div class="col-lg-6">
+
+            <% for(let item of user.cart) {%>
+                
+                <div class="card mx-auto mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="<%= item.img %>" class="img-fluid rounded-start" alt="..." style="height: 150px;">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title"><%= item.name %> </h5>
+                          <h5 class="card-title">&#x20B9 : <%= item.price %> </h5>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <form action="/cart/<%=item._id%>/remove?_method=DELETE" method="POST">
+                                <button class="btn btn-danger btn-sm ">Remove</button>
+                            </form>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                
+            <%}%>
+        </div>
+        <div class="col-lg-4">
+            <%let totalAmount=0%>
+            <h1 class="display-6">Items</h1>
+           <ul class="list-group">
+                <%for(let item of user.cart){%>
+                    <% totalAmount+=item.price %>
+                    <li class="list-group-item"> <span class="fw-bold"> <%=item.name%></span> : &#x20B9 <span><%= item.price %> </span>  </li>
+                <%}%>
+                <li class="list-group-item"> <span class="fw-bold"> Total Amount</span> : &#x20B9 <span><%= totalAmount %> </span>  </li>
+            </ul>
+
+            <div class="my-3">
+                <form action="#">
+                    <button class="btn btn-success btn-small">Proceed To Pay</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<%- include("../partials/footer") %> 
