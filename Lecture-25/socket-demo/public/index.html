@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <style>
+        section{
+            border:10px solid #ccc;
+            margin:40px auto;
+            width: 450px;
+            padding: 16px;
+        }
+        textarea,button{
+            font-size: 1.4rem;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <h1>Socket Demo</h1>
+
+    <section>
+
+        <textarea id="inp-msg" cols="30" rows="5"></textarea>
+        <br>
+        <button id="send-btn">send</button>
+
+        <ul id="chat"></ul>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
