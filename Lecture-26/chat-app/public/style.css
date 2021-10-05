@@ -1,0 +1,27 @@
+section{
+    width: 380px;
+    margin: 50px auto;
+}
+
+#chat-box{
+    height: 50vh;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    border-radius: 8px;
+    border:1px solid #ccc;
+    margin:5px;
+    padding: 16px 10px;
+}
+
+#chat-box{
+    overflow-y: scroll;
+}

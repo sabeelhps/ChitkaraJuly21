@@ -1,0 +1,4 @@
+1.Store the messages in db
+2.Implement one-on-one chat using Rooms(socketio)
+3.Implement Real time typing status of a client
+4.Optional - Implement the Encryption Layer for messages
