@@ -53,6 +53,7 @@ const PersonList = ()=> {
             <Form add={ addPerson}/>
             {personsList}
         </div>
+
     )
 }
 
