@@ -2,7 +2,8 @@ import './App.css';
 import Happy from './components/Happy';
 import useToggleState from './components/hooks/useToggleState';
 import useFormState from './components/hooks/useFormState';
-
+import Count from './components/Count';
+import Movie from './components/Movie';
 
 const App = () => {
   
@@ -44,6 +45,10 @@ const App = () => {
         />
         <button type="submit">Submit</button>
       </form>
+
+      <Count />
+      
+      <Movie/>
 
     </div>
   );
