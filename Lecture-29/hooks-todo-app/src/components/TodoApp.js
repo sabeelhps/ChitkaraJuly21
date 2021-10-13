@@ -7,7 +7,7 @@ import { v4 as uuid } from 'uuid';
 
 const TodoApp = () => {
 
-    const initalialTodos = JSON.parse(window.localStorage.getItem('todos'));
+    const initalialTodos = JSON.parse(window.localStorage.getItem('todos'||"[]"));
     
     const [todos, setTodos] = useState(initalialTodos);
 
