@@ -1,0 +1,18 @@
+.food-list{
+    width:60%;
+    margin:50px auto;
+    box-shadow: 0px 2px 8px rgba(246, 243, 243, 0.26);
+    list-style: none;
+    padding: 16px;
+    background-color: white;
+    border-radius: 0.8rem;
+    animation-name: slidup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidup {
+    100%{
+        transform: translateY(-130px);
+    }
+}
