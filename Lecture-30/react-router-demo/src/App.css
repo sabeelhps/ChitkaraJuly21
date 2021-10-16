@@ -1,0 +1,27 @@
+nav{
+  margin: 0;
+  background-color: rgb(79, 79, 168);
+  
+  font-size: 1.5rem;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+
+
+.selected{
+  border-bottom:3px solid rgb(195, 195, 195) ;
+  color:rgb(224, 218, 218);
+}
