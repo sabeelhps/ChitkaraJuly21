@@ -1,0 +1,32 @@
+.cart-btn{
+    padding: 0.8rem 3rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: rgb(63, 15, 15);
+    color:white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+
+
+
+
+.badge{
+    padding: 3px 20px;
+    background-color: rgb(153, 57, 57);
+    margin-left: 10px;
+    border-radius: 1.5rem;
+}
+
+.cart-icon{
+    margin-right: 5px;
+    margin-bottom: -3px;
+}
+
+@media screen and (max-width:880px){
+    .cart-btn{
+        padding: 0.8rem 1rem;
+        font-size: 1.4rem;
+    }
+}

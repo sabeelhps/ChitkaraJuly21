@@ -1,0 +1,11 @@
+.poster{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.poster img{
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(-4deg) translateY(-4rem) translateX(-1rem);
+}
