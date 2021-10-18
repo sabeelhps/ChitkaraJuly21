@@ -8,9 +8,10 @@ router.get('/allfoods', async (req, res) => {
         res.status(200).json(allfoods);
     }
     catch (e) {
-        res.status(404).json({msg:"Cannot fetch the foods at the moment"})
+        res.status(404).json({ msg: "Cannot fetch the foods at the moment" })
     }
-})
+});
+
 
 
 

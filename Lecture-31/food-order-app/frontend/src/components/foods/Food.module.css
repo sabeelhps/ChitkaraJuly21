@@ -1,0 +1,41 @@
+.food{
+    border-bottom: 1px solid gray;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.desc{
+    font-style: italic;
+}
+.price{
+    color:rgb(107, 43, 43);
+    font-weight: bold;
+    margin-top:5px;
+}
+
+.add-btn{
+    display: block;
+    padding: 0.2rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    border:none;
+    background-color: rgb(121, 42, 42);
+    color:white;
+    cursor: pointer;
+}
+
+.food label{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.food input{
+    width: 30px;
+    font-size: 1.2rem;
+}
